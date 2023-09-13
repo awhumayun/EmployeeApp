@@ -5,12 +5,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { EmployeeComponent } from './components/employee/employee.component';
 import { EmployeePositionComponent } from './components/employee-position/employee-position.component';
-import { EmployeesServiceService } from './services/employees-service.service';
+import { EmployeesService } from './services/employees.service';
 
 @NgModule({
   declarations: [AppComponent, EmployeeComponent, EmployeePositionComponent],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
-  providers: [EmployeesServiceService],
+  providers: [EmployeesService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

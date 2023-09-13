@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { EmployeesServiceService } from 'src/app/services/employees-service.service';
+import { Employee } from 'src/app/interfaces/employee';
+import { EmployeesService } from 'src/app/services/employees.service';
 
 @Component({
   selector: 'app-employee',
@@ -7,12 +8,11 @@ import { EmployeesServiceService } from 'src/app/services/employees-service.serv
   styleUrls: ['./employee.component.css'],
 })
 export class EmployeeComponent {
-  employees: any;
+  employees: Employee[] = [];
 
-  constructor(private employeesService: EmployeesServiceService) {}
+  constructor(private employeesService: EmployeesService) {}
 
   async ngOnInit() {
     this.employees = await this.employeesService.getEmployees();
-    console.log(this.employees);
   }
 }

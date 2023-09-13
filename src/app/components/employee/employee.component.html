@@ -1,0 +1,16 @@
+<table>
+    <th>
+        First Name
+    </th>
+    <th>
+        Last Name
+    </th>
+    <th>
+        Department
+    </th>
+</table>
+<tr *ngFor="let employee of employees">
+    <td>{{ employee.empFname }}</td>
+    <td>{{ employee.empLname }}</td>
+    <td>{{ employee.department }}</td>
+</tr>

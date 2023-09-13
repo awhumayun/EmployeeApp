@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { EmployeeComponent } from './components/employee/employee.component';
 import { EmployeePositionComponent } from './components/employee-position/employee-position.component';
-import { EmployeesService } from './services/employees.service';
+import { EmployeesService } from './service/employees.service';
 
 @NgModule({
   declarations: [AppComponent, EmployeeComponent, EmployeePositionComponent],
